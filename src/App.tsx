@@ -3,6 +3,7 @@ import Exercise from "./components/ExerciseCard"
 import ExerciseList from "./components/ExerciseList"
 import WorkoutTypeList from "./components/WorkoutTypeList"
 import WorkoutPlanList from './components/WorkoutPlanList'
+import UserProgressList from "./components/UserProgressList"
 
 
 /*const exercise: Exercise = {
@@ -22,7 +23,7 @@ import WorkoutPlanList from './components/WorkoutPlanList'
 function App() {
   return (
     <>
-      <h2 className="m-2">Find a exercise...</h2>
+      <h2 className="m-2">Find an exercise...</h2>
       <ExerciseList />
 
       <h2 className="m-2">Find a workout type...</h2>
@@ -30,8 +31,13 @@ function App() {
 
       <h2 className="m-2">Find a workout plan...</h2>
       <WorkoutPlanList />
+
+      
+      <h2 className="m-2">Track Your Progress...</h2>
+      <UserProgressList />
+
     </>
-  )
+  );
 }
 
-export default App
+export default App;
