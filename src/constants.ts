@@ -1,4 +1,4 @@
-import { Exercise, WorkoutPlan, WorkoutType } from "./utils/types";
+import { Exercise, WorkoutPlan, WorkoutType, UserProgress } from "./utils/types";
 
 export const exerciseList: Exercise[] = [
     {
@@ -8,9 +8,7 @@ export const exerciseList: Exercise[] = [
         category: 'Compound Movement Exercise',
         manufacturer: 'PowerMax',
         videoUrl: 'https://www.youtube.com/watch?v=ultWZbUMPL8'
-
     },
-
     {
         id: '003',
         name: 'Deadlift',
@@ -19,7 +17,6 @@ export const exerciseList: Exercise[] = [
         manufacturer: 'Rogue Fitness',
         videoUrl: 'https://www.youtube.com/watch?v=op9kVnSso6Q'
     },
-
     {
         id: '004',
         name: 'Pull-up',
@@ -27,14 +24,8 @@ export const exerciseList: Exercise[] = [
         category: 'Bodyweight Exercise',
         manufacturer: 'No Equipment Required',
         videoUrl: 'https://www.youtube.com/watch?v=eGo4IYlbE5g'
-
     }
-
-
-
-
-
-]
+];
 
 export const workoutTypeList: WorkoutType[] = [
     {
@@ -42,42 +33,48 @@ export const workoutTypeList: WorkoutType[] = [
         name: 'Powerlifting Routine',
         description: 'Powerlifting training aims to increase overall strength by focusing on compound movements like squats, bench press, and deadlifts.',
         category: 'Strength Training',
-        notes: 'Pay attention to proper form and gradually increase weights for progressive overload.',
+        notes: 'Pay attention to proper form and gradually increase weights for progressive overload.'
     },
-
     {
         id: '003',
         name: 'Cardio Circuit',
         description: 'Cardio circuit workouts combine aerobic exercises to burn calories and improve cardiovascular health, aiding in weight loss.',
         category: 'Cardiovascular Exercise',
-        notes: 'Include a mix of activities like running, jumping jacks, and burpees for an effective circuit.',
+        notes: 'Include a mix of activities like running, jumping jacks, and burpees for an effective circuit.'
     },
-
     {
         id: '004',
         name: 'Yoga for Mobility',
         description: 'Yoga enhances flexibility and mobility by incorporating poses and stretches. It promotes relaxation and overall well-being.',
         category: 'Flexibility and Mobility',
-        notes: 'Focus on controlled breathing and hold each pose to improve flexibility and reduce stiffness.',
+        notes: 'Focus on controlled breathing and hold each pose to improve flexibility and reduce stiffness.'
     }
-      
-      
-
-
-]
-
+];
 
 export const workoutPlanList: WorkoutPlan[] = [
-  {
-    id: '001',
-    name: 'Full Body Strength',
-    numberOfDays: 3,
-    exercises: [
-      // Reference existing exercises here
-      exerciseList.find((exercise) => exercise.id === '002')!,
-      exerciseList.find((exercise) => exercise.id === '004')!,
-      // Add other exercises as needed
-    ]
-  }
-  // Add other workout plans as needed
+    {
+        id: '001',
+        name: 'Full Body Strength',
+        numberOfDays: 3,
+        exercises: [
+            exerciseList.find((exercise) => exercise.id === '002')!,
+            exerciseList.find((exercise) => exercise.id === '004')!
+        ]
+    }
+    // Add other workout plans as needed
 ];
+
+export const userProgressList: UserProgress[] = [
+    {
+      id: '001',
+      startWeight: 70,
+      currentWeight: 68,
+      startBodyFatPercentage: 15,
+      currentBodyFatPercentage: 12,
+    },
+    // Add other user progress entries as needed
+  ];
+
+
+
+

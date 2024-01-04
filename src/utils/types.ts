@@ -22,3 +22,12 @@ export type WorkoutPlan = {
     numberOfDays: number;
     exercises: Exercise[];
 }
+
+export type UserProgress = {
+    id: string;
+    startWeight: number;
+    currentWeight: number;
+    startBodyFatPercentage: number;
+    currentBodyFatPercentage: number;
+}; 
+
