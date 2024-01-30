@@ -20,7 +20,7 @@ export type WorkoutPlan = {
     id: string;
     name: string;
     numberOfDays: number;
-    exercises: Exercise[];
+    listExercises: string;
 }
 
 export type UserProgress = {

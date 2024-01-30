@@ -15,24 +15,16 @@ const UserProgressCard: React.FC<Props> = ({ userProgress, onRemove, onEdit }) =
         <div className="card-body">
           <div className="form-group">
             <p className="card-text">
-              <strong>Start Weight:</strong> {userProgress.startWeight} kg
+              <strong>Weight:</strong> {userProgress.startWeight} kg
             </p>
           </div>
+          
           <div className="form-group">
             <p className="card-text">
-              <strong>Current Weight:</strong> {userProgress.currentWeight} kg
+              <strong>Body Fat Percentage:</strong> {userProgress.startBodyFatPercentage}%
             </p>
           </div>
-          <div className="form-group">
-            <p className="card-text">
-              <strong>Start Body Fat Percentage:</strong> {userProgress.startBodyFatPercentage}%
-            </p>
-          </div>
-          <div className="form-group">
-            <p className="card-text">
-              <strong>Current Body Fat Percentage:</strong> {userProgress.currentBodyFatPercentage}%
-            </p>
-          </div>
+          
           <hr className="my-4" />
           <div className="d-flex justify-content-between">
             <button className="btn btn-warning" onClick={onEdit}>

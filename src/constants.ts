@@ -1,4 +1,7 @@
 import { Exercise, WorkoutPlan, WorkoutType, UserProgress } from "./utils/types";
+export type { Exercise, WorkoutPlan, WorkoutType, UserProgress } from "./utils/types";
+
+
 
 export const exerciseList: Exercise[] = [
     {
@@ -56,10 +59,7 @@ export const workoutPlanList: WorkoutPlan[] = [
         id: '001',
         name: 'Full Body Strength',
         numberOfDays: 3,
-        exercises: [
-            exerciseList.find((exercise) => exercise.id === '002')!,
-            exerciseList.find((exercise) => exercise.id === '004')!
-        ]
+        listExercises: "Bench Press, Leg Press"
     }
     // Add other workout plans as needed
 ];
@@ -75,6 +75,4 @@ export const userProgressList: UserProgress[] = [
     // Add other user progress entries as needed
   ];
 
-
-
-
+  export const BASE_URL = 'http://localhost:8080/api'

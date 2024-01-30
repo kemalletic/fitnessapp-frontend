@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from 'react';
+import React, { useState, ChangeEvent, useEffect } from 'react';
 import UserProgressCard from '../UserProgressCard';
 import { UserProgress } from '../../utils/types';
 
@@ -93,18 +93,9 @@ const UserProgressList: React.FC<Props> = () => {
           <>
             <h3>{editIndex !== null ? 'Edit' : 'Set Your'} Progress</h3>
             <form>
+              
               <div className="form-group">
-                <label>Start Weight:</label>
-                <input
-                  type="text"
-                  name="startWeight"
-                  value={formData.startWeight}
-                  onChange={handleInputChange}
-                  className="form-control"
-                />
-              </div>
-              <div className="form-group">
-                <label>Current Weight:</label>
+                <label>Weight:</label>
                 <input
                   type="text"
                   name="currentWeight"
@@ -113,18 +104,9 @@ const UserProgressList: React.FC<Props> = () => {
                   className="form-control"
                 />
               </div>
+              
               <div className="form-group">
-                <label>Start Body Fat Percentage:</label>
-                <input
-                  type="text"
-                  name="startBodyFatPercentage"
-                  value={formData.startBodyFatPercentage}
-                  onChange={handleInputChange}
-                  className="form-control"
-                />
-              </div>
-              <div className="form-group">
-                <label>Current Body Fat Percentage:</label>
+                <label>Body Fat Percentage:</label>
                 <input
                   type="text"
                   name="currentBodyFatPercentage"
